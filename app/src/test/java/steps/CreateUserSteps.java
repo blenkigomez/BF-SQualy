@@ -1,24 +1,27 @@
 package steps;
+
+import org.junit.Assert;
+
 import io.cucumber.java.en.*;
 import pages.ProductStorePage;
 
 public class CreateUserSteps {
-    
+
     ProductStorePage productStore = new ProductStorePage();
 
     @Given("^I am on the product store page$")
-    public void navigateToProductStore(){
-    productStore.navigateToProductStore();
+    public void navigateToProductStore() {
+        productStore.navigateToProductStore();
 
     }
 
     @When("^I click on sign up$")
-    public void clickSignUp(){
+    public void clickSignUp() {
         productStore.clickSignUp();
     }
 
     @And("^I fill in the registration data and click on sign up$")
-    public void enterSignUsername(){
+    public void enterSignUsername() {
         productStore.enterSignUsername("blenkitest2");
         productStore.enterSignPassword("test123");
         productStore.clickSignUpButton();
@@ -26,8 +29,8 @@ public class CreateUserSteps {
     }
 
     @Then("^the result is that a user is created$")
-    public void validateResults(){
-
+    public void validateResults() {
+        Assert.assertEquals("expected", productStore.firstResult());
     }
 
 }

@@ -2,7 +2,7 @@ package pages;
 
 import org.junit.Assert;
 
-public class ProductStorePage extends BasePage{
+public class ProductStorePage extends BasePage {
 
     private String signUp = "/html[1]/body[1]/nav[1]/div[1]/ul[1]/li[8]/a[1]";
     private String signUsername = "//input[@id='sign-username']";
@@ -20,76 +20,81 @@ public class ProductStorePage extends BasePage{
     private String cart = "//a[@id='cartur']";
     private String logOut = "/html[1]/body[1]/nav[1]/div[1]/ul[1]/li[6]/a[1]";
 
-    public ProductStorePage(){
+    private String firstResult = "";
+
+    public ProductStorePage() {
         super(driver);
     }
 
-    public void navigateToProductStore(){
+    public void navigateToProductStore() {
         navigateTo("https://www.demoblaze.com");
     }
 
-    public void clickSignUp(){
+    public void clickSignUp() {
         clickElement(signUp);
     }
 
-    public void clickLogIn(){
+    public void clickLogIn() {
         clickElement(logIn);
     }
 
-    public void clickLogOut(){
+    public void clickLogOut() {
         clickElement(logOut);
     }
 
-    public void clickCart(){
+    public void clickCart() {
         clickElement(cart);
     }
 
-    public void enterSignUsername(String username){
+    public void enterSignUsername(String username) {
         write(signUsername, username);
     }
 
-    public void enterSignPassword(String password){
+    public void enterSignPassword(String password) {
         write(signPassword, password);
     }
 
-    public void clickSignUpButton(){
+    public void clickSignUpButton() {
         clickElement(signUpButton);
     }
-    
-    public void clickSignUpCloseButton(){
+
+    public void clickSignUpCloseButton() {
         clickElement(signUpCloseButton);
     }
 
-    public void enterLogInUsername(String username){
+    public void enterLogInUsername(String username) {
         write(logInUsername, username);
     }
 
-    public void enterLogInPassword(String password){
+    public void enterLogInPassword(String password) {
         write(logInPassword, password);
     }
 
-    public void clickLogInButton(){
+    public void clickLogInButton() {
         clickElement(logInButton);
     }
-    
-    public void clickLogInCloseButton(){
+
+    public void clickLogInCloseButton() {
         clickElement(logInCloseButton);
     }
 
-    public void aceptAlert(){
+    public void aceptAlert() {
         aceptAlert();
     }
 
-    public void clickInLaptop(){
+    public void clickInLaptop() {
         clickElement(laptopSony);
     }
 
-    public void addToCartButton(){
+    public void addToCartButton() {
         clickElement(addToCartButton);
     }
 
-    public void validateText(String locator, String textToValidate){
+    public void validateText(String locator, String textToValidate) {
         Assert.assertEquals(textToValidate, locator);
     }
-}
 
+    public String firstResult() {
+        return textFromElement(firstResult);
+    }
+}
