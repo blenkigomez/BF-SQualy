@@ -18,6 +18,7 @@ public class ProductStorePage extends BasePage {
     private String laptopSony = "//a[contains(text(),'Sony vaio i5')]";
     private String addToCartButton = "//a[contains(text(),'Add to cart')]";
     private String cart = "//a[@id='cartur']";
+    private String laptopInCart = "//td[contains(text(),'Sony vaio i5')]";
     private String logOut = "/html[1]/body[1]/nav[1]/div[1]/ul[1]/li[6]/a[1]";
 
     private String firstResult = "";

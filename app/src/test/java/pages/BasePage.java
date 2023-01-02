@@ -10,18 +10,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
-    protected static WebDriver driver;
+
+    protected static WebDriver driver = new ChromeDriver();
+    
     protected static WebDriverWait wait;
 
     static {
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
-        wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, 10);
     }
 
     public BasePage(WebDriver driver) {
         BasePage.driver = driver;
-        wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, 10);
     }
 
     public static void navigateTo(String url) {

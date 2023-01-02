@@ -1,27 +1,18 @@
 package steps;
 
-import io.cucumber.java.en.*;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import cucumber.api.java.en.And;
 import pages.ProductStorePage;
 
 public class LaptopInCartSteps {
 
     ProductStorePage productStore = new ProductStorePage();
 
-    @Given("^I am on the product store page$")
-    public void navigateToProductStore() {
-        productStore.navigateToProductStore();
-
-    }
-
-    @And("^I logged in with my username and password$")
-    public void logIn() {
-        productStore.enterLogInUsername("blenki1");
-        productStore.enterLogInPassword("test123");
-        productStore.clickLogInButton();
-        productStore.aceptAlert();
-    }
-
-    @When("^I click on laptop$")
+    @Given("^I click on laptop$")
     public void clickInLaptop() {
         productStore.clickInLaptop();
     }
@@ -33,7 +24,7 @@ public class LaptopInCartSteps {
     }
 
     @Then("^the result is that a laptop is added on my cart$")
-    public void validateResults() {
-
+    public void validateResults(String textToValidate, String locator) {
+        productStore.validateText("Sony vaio i5", locator);
     }
 }

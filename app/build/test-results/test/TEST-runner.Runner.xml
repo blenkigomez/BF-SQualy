@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.Runner" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-01-02T08:05:37" hostname="AR0FVFCH1VCL415" time="0.0">
+  <properties/>
+  <testcase name="initializationError" classname="runner.Runner" time="0.0">
+    <failure message="cucumber.runtime.DuplicateStepDefinitionException: Duplicate step definitions in steps.LaptopInCartSteps.navigateToProductStore() in file:/Users/jesgomez/Documents/BF-SQualy/app/build/classes/java/test/ and steps.BackgroundSteps.navigateToProductStore() in file:/Users/jesgomez/Documents/BF-SQualy/app/build/classes/java/test/" type="cucumber.runtime.DuplicateStepDefinitionException">cucumber.runtime.DuplicateStepDefinitionException: Duplicate step definitions in steps.LaptopInCartSteps.navigateToProductStore() in file:/Users/jesgomez/Documents/BF-SQualy/app/build/classes/java/test/ and steps.BackgroundSteps.navigateToProductStore() in file:/Users/jesgomez/Documents/BF-SQualy/app/build/classes/java/test/
+	at app//cucumber.runner.Glue.addStepDefinition(Glue.java:30)
+	at app//cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:142)
+	at app//cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:65)
+	at app//cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:42)
+	at app//cucumber.runtime.java.JavaBackend.loadGlue(JavaBackend.java:82)
+	at app//cucumber.runner.Runner.&lt;init&gt;(Runner.java:28)
+	at app//cucumber.runner.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:44)
+	at app//cucumber.runner.ThreadLocalRunnerSupplier.access$000(ThreadLocalRunnerSupplier.java:15)
+	at app//cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:24)
+	at app//cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:21)
+	at java.base@18.0.1.1/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:195)
+	at java.base@18.0.1.1/java.lang.ThreadLocal.get(ThreadLocal.java:172)
+	at app//cucumber.runner.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
+	at app//cucumber.api.junit.Cucumber.&lt;init&gt;(Cucumber.java:108)
+	at java.base@18.0.1.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base@18.0.1.1/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base@18.0.1.1/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at app//org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:104)
+	at app//org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)
+	at app//org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at app//org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
+	at app//org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at app//org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:33)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:78)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base@18.0.1.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@18.0.1.1/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
